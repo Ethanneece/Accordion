@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+
+    --White: hsl(0, 0%, 100%);
+    --light-pink: hsl(275, 100%, 97%);
+    --grayish-purple: hsl(292, 16%, 49%);
+    --dark-purple: hsl(292, 42%, 14%);
+}
+
+* {
+    margin: 0px;
+    padding: 0px; 
+
+    font-family: "Work Sans", sans-serif;
+}
+
+p {
+    font-size: 16px;
+    color: var(--grayish-purple);
+}
+
+hr {
+    color: lightgray;
+    background-color: rgb(240, 237, 237);
+    height: 2px;
+    border: none;
+}
+
+h2 {
+    font-size: 1.13em;
+    color: var(--dark-purple);
+}
+
+body {
+    width: 100vw; 
+    height: 100vh;
+
+    background-color: var(--light-pink);
+    background-image: url("assets/images/background-pattern-desktop.svg");
+    background-repeat: repeat-x;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    width: 30px;
+    height: 31px;
+
+    min-width: 30px;
+    height: 31px;
+}
+
+.plus {
+    background-image: url("assets/images/icon-plus.svg");
+}
+
+.minus {
+    background-image: url("assets/images/icon-minus.svg");
+}
+
+.accordionContainer {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+
+    background-color: var(--White);
+    padding: 20px;
+    gap: 24px;
+    border-radius: 10px;
+    max-width: 560px;
+    width: 560px;
+
+    box-shadow: 2px 2px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.headerTitle {
+    font-size: 3.5em;
+    color: var(--dark-purple);
+}
+
+.dropDown {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hide {
+    display: none;
+}
+
+@media screen and (max-width: 375px) {
+    
+    .accordionContainer {
+        max-width: 90%;
+        padding: 20px 10px;
+    }
+
+    body {
+        background-image: url("assets/images/background-pattern-mobile.svg");
+    }
+}
